@@ -316,13 +316,13 @@ async def m_cb(b, cb):
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style="md")
-        msg = "**Lagu Yang Sedang dimainkan** di {}".format(cb.message.chat.title)
+        msg = "**Current Song** di {}".format(cb.message.chat.title)
         msg += "\n• "+ now_playing
-        msg += "\n• Atas permintaan "+by
+        msg += "\n• On request "+by
         temp.pop(0)
         if temp:
              msg += "\n\n"
-             msg += "**Antrian Lagu**"
+             msg += "**Song Queue**"
              for song in temp:
                  name = song[0]
                  usr = song[1].mention(style="md")
@@ -583,7 +583,7 @@ async def play(_, message: Message):
             while j < 6:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:30]}](https://youtube.com{results[j]['url_suffix']})\n"
                 toxxt += f" ├ 💡 **Duration** - {results[j]['duration']}\n"
-                toxxt += f" └ ⚡ __Powered by {BOT_NAME} A.I__\n\n"
+                toxxt += f" └ ⚡ __Powered by {BOT_NAME} __\n\n"
                 j += 1            
             keyboard = InlineKeyboardMarkup(
                 [
