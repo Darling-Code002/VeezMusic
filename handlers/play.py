@@ -652,7 +652,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         qeue = que.get(chat_id)
         s_name = title
-        r_by = message.from_user                        f"<b>Flood Wait Error\n{user.first_name} tidak dapat bergabung dengan grup Anda karena 
+        r_by = message.from_user   
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
