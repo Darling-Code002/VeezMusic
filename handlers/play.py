@@ -462,7 +462,7 @@ async def play(_, message: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>⛑ Flood Wait Error ⛑\n{user.first_name} for some reason assistant can't join this group ."
-                        f"n\nTry Adding @{ASSISTANT_NAME} manually.</b>",
+                        f"\n\nTry Adding @{ASSISTANT_NAME} manually.</b>",
                     )
     try:
         await USER.get_chat(chid)
