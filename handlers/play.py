@@ -461,8 +461,8 @@ async def play(_, message: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>⛑ Flood Wait Error ⛑\n{user.first_name} tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk userbot! Pastikan pengguna tidak dibanned dalam grup."
-                        f"\n\nAtau tambahkan @{ASSISTANT_NAME} secara manual ke Grup Anda dan coba lagi</b>",
+                        f"<b>⛑ Flood Wait Error ⛑\n{user.first_name} for some reason assistant can't join this group ."
+                        f"n\nTry Adding @{ASSISTANT_NAME} manually.</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -501,7 +501,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"❌ **lagu dengan durasi lebih dari** `{DURATION_LIMIT}` **menit tidak dapat diputar!**"
+                f"❌ **songs with a duration of more than** `{DURATION_LIMIT}` **minutes cannot be played!**"
             )
         keyboard = InlineKeyboardMarkup(
             [
@@ -515,7 +515,7 @@ async def play(_, message: Message):
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/fa2cdb8a14a26950da711.png"
+        thumb_name = "https://telegra.ph/file/74b63f8f20cf9cd721d29.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -652,7 +652,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         qeue = que.get(chat_id)
         s_name = title
-        r_by = message.from_user
+        r_by = message.from_user                        f"<b>Flood Wait Error\n{user.first_name} tidak dapat bergabung dengan grup Anda karena 
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
@@ -720,7 +720,7 @@ async def lol_cb(b, cb):
             dur += (int(dur_arr[i]) * secmul)
             secmul *= 60
         if (dur / 60) > DURATION_LIMIT:
-             await cb.message.edit(f"❌ Lagu dengan durasi lebih dari `{DURATION_LIMIT}` menit tidak dapat diputar.")
+             await cb.message.edit(f"❌ songs with a duration of more than** `{DURATION_LIMIT}` **minutes cannot be played.")
              return
     except:
         pass
@@ -839,8 +839,8 @@ async def ytplay(_, message: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>Flood Wait Error\n{user.first_name} tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk userbot! Pastikan pengguna tidak dibanned dalam grup."
-                        f"\n\nAtau tambahkan @{ASSISTANT_NAME} secara manual ke Grup Anda dan coba lagi</b>",
+                         f"<b>⛑ Flood Wait Error ⛑\n{user.first_name} for some reason assistant can't join this group ."
+                        f"\n\nTry Adding @{ASSISTANT_NAME} manually to the grogroup</b>",
                     )
     try:
         await USER.get_chat(chid)
