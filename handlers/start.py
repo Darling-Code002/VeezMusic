@@ -58,7 +58,7 @@ async def start_(client: Client, message: Message):
                         "👥 Chat Group", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 Anime Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "🔥 Anime Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
                 
                     )
                 ]
@@ -82,7 +82,7 @@ async def start(client: Client, message: Message):
                         "✨ Group", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "💫 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ]
             ]
